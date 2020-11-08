@@ -37,7 +37,7 @@ function getTasks(){
 function addTask(e){
   if(taskInput.value === ''){
     alert('Add a Task')
-  }
+  }else{
   const li = document.createElement('li')
   li.className =  'collection-item'
   li.appendChild(document.createTextNode(taskInput.value));
@@ -50,6 +50,7 @@ function addTask(e){
   storeTaskInLocalStorage(taskInput.value)
   
   taskInput.value = ''
+  }
   e.preventDefault();
 }
 function storeTaskInLocalStorage(task){
